@@ -312,6 +312,7 @@ if ($action == 'add_record')
 			`ttl` = :ttl,
 			`domain_id` = :domain_id
 			WHERE `id` = :id
+			AND `domain_id` = :domain_id
 		");
 		Database::pexecute($ins_stmt, $new_entry);
 
